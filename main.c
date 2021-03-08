@@ -1,6 +1,6 @@
 /**
  *  David Nguyen
- *  Tag des Jahres
+ *
  *
  **/
 
