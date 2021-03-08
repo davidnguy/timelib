@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1615131740 source:c:\git\wichmannc\main.c
+	<stdio.h>
+	<stdlib.h>
+	"time.h"
+
