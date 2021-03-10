@@ -20,7 +20,7 @@ int main()
     int day;
     int month;
     int year;
-    int sum_of_days;
+    int sum_of_days = 0;
     int *pointerYear = &year;
     int *pointerMonth = &month;
     int *pointerDay = &day;

@@ -1,19 +1,24 @@
 #ifndef FUNKTIONEN_H_INCLUDED
 #define FUNKTIONEN_H_INCLUDED
+/**
+*
+*   David Nguyen
+*   Tag des Jahres
+*
+**/
 
-int day_of_the_year(struct dateStruct date) // Funktion zur berechnung der Tage
+int day_of_the_year(struct dateStruct date) // Funktion zur Berechnung der Tage
 {
-  for(int i = date.month - 2; i >= 0; i--)
-   {
-       sum_of_days += days_per_month[i];
-   }
-   // Tage des aktuell angegebenen Monats.
-   sum_of_days += date.day;
+    if (exists_date(date.year,date.month,date.day) == 1)    //Prüft ob dieses Datum existiert
+    {
+        for(int i=1; i < date.month; i++)
+        {
+            sum_of_days += get_days_for_month(date.year, i); // Addiert den Tag für jeden Monat
+        }
+        sum_of_days += date.day; // Addiert die Tage vom aktuellen Monat
+        return sum_of_days;
 
-   // Ausgabe.
-   printf("Das Jahr hat bereits %i Tage", sum_of_days);
-   return 0;
-
+    }
 }
 
 int is_leapyear(struct dateStruct date) // Funktion zur überprüfung des Schaltjahres
